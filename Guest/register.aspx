@@ -65,7 +65,7 @@
         <div style="background-image: url('images/bird3.jpeg')">
     <div>
     
-        <table class="auto-style1">
+        <table class="auto-style1" style="border-style: solid">
             <tr>
                 <td colspan="2" style="text-align: center" class="auto-style11"><h1>REGISTRATION FORM</h1><asp:ScriptManager ID="ScriptManager1" runat="server">
                     </asp:ScriptManager>
@@ -75,25 +75,26 @@
                 <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>User name</strong></td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtuname" runat="server" required="required"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter username" ForeColor="Red" ControlToValidate="txtuname"></asp:RequiredFieldValidator>--%>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter valid name" ControlToValidate="txtuname" ForeColor="Red" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Enter username" ForeColor="Red" ControlToValidate="txtuname"></asp:RequiredFieldValidator>--%>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Email&nbsp;</strong></td>
                 <td class="auto-style3">
                     <asp:TextBox ID="emailtxt" runat="server" TextMode="Email" required="required"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="emailtxt" ErrorMessage="Enter email" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="emailtxt" ErrorMessage="enter correct format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="emailtxt" ErrorMessage="Enter email" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="emailtxt" ErrorMessage="Enter correct format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Password</strong>&nbsp;</td>
                 <td class="auto-style3">
                     
-                    <asp:TextBox ID="txtpswd" runat="server" required="required"></asp:TextBox>
+                    <asp:TextBox ID="txtpswd" runat="server" required="required" TextMode="Password"></asp:TextBox>
                     <cc1:PasswordStrength ID="txtpswd_PasswordStrength" runat="server" Enabled="True" TargetControlID="txtpswd">
                     </cc1:PasswordStrength>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtpswd" ErrorMessage="Enter password" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtpswd" ErrorMessage="Enter password" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                     
                 </td>
             </tr>
@@ -101,7 +102,7 @@
                 <td class="auto-style19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Retype Password</strong></td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtconpswd" runat="server" TextMode="Password" required="required"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Confirm password" ForeColor="Red" ControlToValidate="txtconpswd"></asp:RequiredFieldValidator>--%>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Confirm password" ForeColor="Red" ControlToValidate="txtconpswd"></asp:RequiredFieldValidator>--%>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtpswd" ControlToValidate="txtconpswd" ErrorMessage="Password Mismatch" ForeColor="Red"></asp:CompareValidator>
                 </td>
             </tr>
@@ -109,14 +110,14 @@
                 <td class="auto-style19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Address</strong></td>
                 <td class="auto-style3">
                     <asp:TextBox ID="txtaddr" runat="server" TextMode="MultiLine" required="required"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtaddr" ErrorMessage="Enter address" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtaddr" ErrorMessage="Enter address" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                 </td>
             </tr>
              <tr>
                 <td class="auto-style20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Phone</strong></td>
                 <td class="auto-style17">
                     <asp:TextBox ID="txtphn" runat="server" required="required"></asp:TextBox>
-<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Phone" ForeColor="Red" ControlToValidate="txtphn"></asp:RequiredFieldValidator>--%>
+                    <%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Phone" ForeColor="Red" ControlToValidate="txtphn"></asp:RequiredFieldValidator>--%>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtphn" ErrorMessage="must be 10 in digit" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
                 </td>
             </tr>
@@ -133,7 +134,7 @@
             <tr>
                 <td class="auto-style22"></td>
                 <td class="auto-style18">
-                    <asp:TextBox ID="txtcaptua" runat="server" required="required"></asp:TextBox>
+                    <asp:TextBox ID="txtcaptua" runat="server" required="required" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete="off"></asp:TextBox>
                     <asp:ImageButton ID="ImageButton1" runat="server" Height="25px" ImageUrl="images/refresh.jpg"  ValidateRequestMode="Disabled" Width="25px" OnClick="ImageButton1_Click" />
                 </td>
             </tr>
@@ -141,6 +142,7 @@
                 <td class="auto-style23"></td>
                 <td class="auto-style14">
                     <asp:Button ID="btnregister" runat="server" Text="SUBMIT" OnClick="Button1_Click" Height="37px" Width="100px" />
+                    <asp:Button ID="btncancel" runat="server" Height="37px" OnClick="Button1_Click1" Text="CANCEL" Width="101px" />
                     <br />
                 <a href="default.aspx" style="color: #FFFFFF">LOGIN</a></td>
             </tr>

@@ -187,7 +187,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 
             
 	</div>
-    	<div class="scroll-button text-center"><a href="#next" class="scroll"><img src="images/arr1.png" alt="" /></a></div>
+    	<div class="scroll-button text-center"><a href="#nexts" class="scroll"><img src="images/arr1.png" alt="" /></a></div>
 
 </div>
 <!-- //banner-bottom -->
@@ -284,6 +284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <asp:Button ID="Button2" runat="server" Text="Cancel" class="btn btn--right" />
           </div>
     New User?<a href="register.aspx">Register Here</a>
+          <a href="forgetpassword.aspx">Forget password?</a>
       </form></div>
 </div>
     

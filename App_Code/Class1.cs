@@ -18,5 +18,8 @@ public class Class1
         con = new SqlConnection(str);
         con.Open();
     }
-	
+	public void closeconnect()
+    {
+        con.Close();
+    }
 }

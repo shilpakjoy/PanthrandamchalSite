@@ -97,7 +97,7 @@ public partial class Admin_register : System.Web.UI.Page
             {
                 cmd1.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
-
+                obj.closeconnect();
                 Response.Write("<script>alert('Registered Successfully')</script>");
             }
         
@@ -136,6 +136,10 @@ public partial class Admin_register : System.Web.UI.Page
         return id;
 
     }
-    
-    
+
+
+    protected void Button1_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("../Guest/default.aspx");
+    }
 }

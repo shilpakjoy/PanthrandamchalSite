@@ -14,7 +14,10 @@ public partial class User_room : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["username"].ToString() == "")
+        {
+            Response.Redirect("~/Guest/default.aspx");
+        }
     }
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {

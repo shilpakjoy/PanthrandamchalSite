@@ -38,7 +38,10 @@ public partial class Admin_AdminHome : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["username"].ToString() == "")
+        {
+            Response.Redirect("~/Guest/default.aspx");
+        }
     }
     
     protected void Button1_Click(object sender, EventArgs e)
@@ -59,6 +62,7 @@ public partial class Admin_AdminHome : System.Web.UI.Page
         cmd.Parameters.Add("@description", txtdesc.Text);
         cmd.Parameters.Add("@rate", txtrate.Text);
         cmd.ExecuteNonQuery();
+        obj.closeconnect();
         clear();
         Response.Write("<script>alert('Registered Successfully')</script>");
     }
