@@ -5,6 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script type="text/javascript">
+        window.history.forward(1);
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,6 +17,8 @@
         <br />
        <%-- <asp:Timer ID="Timer1" runat="server" Interval="5" OnTick="Timer1_Tick1">
         </asp:Timer>--%>
+        <asp:Timer ID="Timer1" runat="server" Interval="1" OnTick="Timer1_Tick">
+        </asp:Timer>
     </div>
     </form>
 </body>

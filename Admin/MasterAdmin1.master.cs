@@ -15,7 +15,5 @@ public partial class Admin_MasterAdmin1 : System.Web.UI.MasterPage
         HttpContext.Current.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
         HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
         HttpContext.Current.Response.Cache.SetNoStore();
-    
     }
-
 }

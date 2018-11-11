@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="viewuser.aspx">View user</a>
                        	<a href="viewbooking.aspx">View Booking</a>
                         <a href="Approved_users.aspx">Approved Users</a>
-                       	<a href="LogOut.aspx">Logout</a>
+                       	<a href="../logout.aspx">Logout</a>
 
 				<ul class="social-icons text-center">
 					<li><a href="#" class="f1"></a></li>

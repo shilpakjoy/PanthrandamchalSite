@@ -12,7 +12,11 @@ public partial class Admin_AdminMaster : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.Cache.SetNoStore();
+        HttpContext.Current.Response.Cache.SetExpires(DateTime.UtcNow.AddDays(-1));
+        HttpContext.Current.Response.Cache.SetValidUntilExpires(false);
+        HttpContext.Current.Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
+        HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        HttpContext.Current.Response.Cache.SetNoStore();
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
