@@ -9,21 +9,25 @@
         .auto-style2 {
             height: 22px;
             text-align: left;
-            width: 307px;
+            width: 361px;
         }
         .auto-style3 {
-            width: 307px;
+            width: 361px;
         }
         .auto-style4 {
             height: 22px;
-            width: 307px;
+            width: 361px;
         }
         .auto-style5 {
-            width: 307px;
+            width: 361px;
             height: 24px;
         }
         .auto-style6 {
             height: 24px;
+        }
+        .auto-style7 {
+            text-align: justify;
+            font-size: x-large;
         }
     </style>
 </asp:Content>
@@ -34,11 +38,11 @@
         <center>
     <table class="nav-justified" style="width :70%">
     <tr>
-        <td colspan="2" class="text-center">ADD ROOMS</td>
+        <td colspan="2" class="auto-style7"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ROOMS</strong></td>
     </tr>
     <tr>
         <td class="auto-style5">
-            <asp:Label ID="Label1" runat="server" Text="Room No"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Room No" style="font-weight: 700"></asp:Label>
         </td>
         <td class="auto-style6">
             <asp:TextBox ID="txtroomno" runat="server" required="required"></asp:TextBox>
@@ -47,7 +51,7 @@
     <tr>
         <td class="auto-style2">
             
-            <asp:Label ID="Label2" runat="server" Text="Type"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Type" style="font-weight: 700"></asp:Label>
         </td>
         <td class="auto-style1">
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
@@ -58,7 +62,7 @@
     </tr>
     <tr>
         <td class="auto-style4">
-            &nbsp;<asp:Label ID="Label3" runat="server" Text="Bed"></asp:Label>
+            &nbsp;<asp:Label ID="Label3" runat="server" Text="Bed" style="font-weight: 700"></asp:Label>
         </td>
         <td class="auto-style1">
             <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal">
@@ -69,7 +73,7 @@
     </tr>
     <tr>
         <td class="auto-style3">
-            <asp:Label ID="Label4" runat="server" Text="Desription"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Desription" style="font-weight: 700"></asp:Label>
         </td>
         <td class="text-left">
             <asp:TextBox ID="txtdesc" runat="server" TextMode="MultiLine" required="required"></asp:TextBox>
@@ -77,7 +81,7 @@
     </tr>
          <tr>
         <td class="auto-style3">
-            <asp:Label ID="Label5" runat="server" Text="Image"></asp:Label>
+            <asp:Label ID="Label5" runat="server" Text="Image" style="font-weight: 700"></asp:Label>
         </td>
         <td class="text-left">
                     <asp:FileUpload ID="FileUpload1" runat="server" />
@@ -89,7 +93,7 @@
     </tr>
     <tr>
         <td class="auto-style3">
-            <asp:Label ID="Label6" runat="server" Text="Rate"></asp:Label>
+            <asp:Label ID="Label6" runat="server" Text="Rate" style="font-weight: 700"></asp:Label>
         </td>
         <td>
             <asp:TextBox ID="txtrate" runat="server" required="required"></asp:TextBox>

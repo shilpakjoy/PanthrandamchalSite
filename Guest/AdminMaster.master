@@ -145,17 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
 						</div>
 					</li>
-					<%--<li>
-						<div class="banner-text">
-							
-							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
-						</div>
-					</li>
-					<li>
-						<div class="banner-text">
-							<h4>Panthrandam Chal Bird Sanctuary and Bio-diversity Centre</h4>
-						</div>
-					</li>--%>
+					
 				</ul>
 		</div>
 	</div>
@@ -283,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <asp:Button ID="Button1" runat="server" Text="Sign in" class="btn btn--right" OnClick="Button1_Click" /> 
               <asp:Button ID="Button2" runat="server" Text="Cancel" class="btn btn--right" />
           </div>
-    New User?<a href="register.aspx">Register Here</a>
+    New User?<a href="register.aspx">Register Here</a><br />
           <a href="forgetpassword.aspx">Forget password?</a>
       </form></div>
 </div>

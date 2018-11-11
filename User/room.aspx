@@ -10,14 +10,15 @@
         <asp:BoundField DataField="type" HeaderText="Type" SortExpression="type" />
         <asp:BoundField DataField="bed" HeaderText="Bed" SortExpression="bed" />
         <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description" />
-        <asp:BoundField DataField="imagepath" HeaderText="Image" SortExpression="imagepath" />
+<%--        <asp:BoundField DataField="imagepath" HeaderText="Image" SortExpression="imagepath" />--%>
         <asp:BoundField DataField="rate" HeaderText="Rate" SortExpression="rate" />
-        <asp:ButtonField CommandName="SELECT" HeaderText="SELECT" Text="SELECT" />
         <asp:TemplateField>
             <ItemTemplate>
                 <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl='<%# Eval("imagepath") %>' Width="200px" />
             </ItemTemplate>
         </asp:TemplateField>
+                <asp:ButtonField CommandName="SELECT" HeaderText="SELECT" Text="SELECT" />
+
     </Columns>
 </asp:GridView>
         </form>

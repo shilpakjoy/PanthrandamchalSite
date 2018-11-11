@@ -148,34 +148,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //banner -->
 <!-- banner-bottom -->
-
-
-
-
-<%--<div id="hello" class="banner-bottom">
-	<div class="container">
-		<div class="btm-header">
-			<h3 class="tittle">ROOMS</h3>
-			
-		</div>
-		<div class="bottom-grids">
-			<div class="col-md-6 bottom-grid">
-		      <br />
-				<div class="btm-left">
-				</div>
-
-	
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-
-</div>--%>
-<!-- //banner-bottom -->
-<!-- highest -->
-
-
 <!-- //footer -->
 <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->
