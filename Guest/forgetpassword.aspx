@@ -19,7 +19,7 @@
         <td><asp:TextBox ID="txtuname" runat="server" required="required"></asp:TextBox></td></tr>
         <tr><td> <asp:Label ID="Label2" runat="server" Text="Phone"></asp:Label></td>
         <td><asp:TextBox ID="txtphn" runat="server" required="required"></asp:TextBox></td></tr>
-        <tr><td></td><td><asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" /></td></tr>
+        <tr><td></td><td><asp:Button ID="Button1" runat="server" Text="SUBMIT" OnClick="Button1_Click" /></td></tr>
     </div>
     </form>
 </body>
