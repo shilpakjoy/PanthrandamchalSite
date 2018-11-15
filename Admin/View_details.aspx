@@ -9,6 +9,7 @@
                 <asp:BoundField DataField="roomno" HeaderText="roomno" SortExpression="roomno" />
                 <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
                 <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
+                <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
             </Fields>
         </asp:DetailsView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:panthrandamchalConnectionString %>" SelectCommand="SELECT * FROM [viewroom] WHERE ([roomno] = @roomno)">
@@ -16,21 +17,25 @@
                 <asp:QueryStringParameter Name="roomno" QueryStringField="id" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="roomno" DataSourceID="SqlDataSource2" Height="50px" Width="125px">
+        <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" Height="50px" Width="125px" BackColor="#FFFFCC">
             <Fields>
-                <asp:BoundField DataField="roomno" HeaderText="roomno" ReadOnly="True" SortExpression="roomno" />
                 <asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
                 <asp:BoundField DataField="bed" HeaderText="bed" SortExpression="bed" />
                 <asp:BoundField DataField="rate" HeaderText="rate" SortExpression="rate" />
+                <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
+<%--                <asp:BoundField DataField="imagepath" HeaderText="imagepath" SortExpression="imagepath" />--%>
             </Fields>
+            <FooterTemplate>
+                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("imagepath") %>' />
+            </FooterTemplate>
         </asp:DetailsView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:panthrandamchalConnectionString %>" SelectCommand="SELECT [roomno], [type], [bed], [rate] FROM [room] WHERE ([roomno] = @roomno)">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:panthrandamchalConnectionString %>" SelectCommand="SELECT [type], [bed], [rate], [description], [imagepath] FROM [room] WHERE ([roomno] = @roomno)">
             <SelectParameters>
                 <asp:QueryStringParameter Name="roomno" QueryStringField="id" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource3" Height="50px" Width="125px">
+        <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource3" Height="50px" Width="125px" BackColor="#FFFFCC">
             <Fields>
                 <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                 <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
